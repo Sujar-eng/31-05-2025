@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900">
+    <nav class="bg-gray-800 navbar1 top-0 z-30">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Mobile menu button-->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false"
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger Icon -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto"
+                            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                            alt="Your Company">
+                    </div>   
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2">
+                    <button type="button"
+                        class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none">
+                        <span class="sr-only">View notifications</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                    </button>
+                    <!-- User menu -->
+                    <div class="ml-3 relative">
+                        <div>
+                            <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none"
+                                id="user-menu-button" aria-expanded="false" aria-haspopup="true"
+                                onclick="document.getElementById('user-dropdown').classList.toggle('hidden')">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="h-8 w-8 rounded-full"
+                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div id="user-dropdown"
+                            class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-20">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="#"
+                    class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium">Dashboard</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Main content here -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 bg-gray-100">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <img src="Image/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg" alt="Nature" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Nature View</h3>
+            <p class="text-gray-600 text-sm mb-4">Explore the beauty of nature and mountains around you.</p>
+            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Read More</a>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <img src="Image/italy-mountains-dawn-daybreak-147411.jpeg" alt="Tech" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Tech World</h3>
+            <p class="text-gray-600 text-sm mb-4">Stay updated with the latest trends in technology and innovation.</p>
+            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Read More</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <img src="Image/pexels-photo-1108572.jpeg" class="w-full h-48 object-cover" alt="Travel">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Travel Diaries</h3>
+            <p class="text-gray-600 text-sm mb-4">Discover new places, cultures, and experiences across the globe.</p>
+            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Read More</a>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <img src="Image/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg" class="w-full h-48 object-cover" alt="Food">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Food Lovers</h3>
+            <p class="text-gray-600 text-sm mb-4">Taste the best cuisines and recipes from around the world.</p>
+            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Read More</a>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <img src="Image/pexels-photo-247599.jpeg" class="w-full h-48 object-cover" alt="Fitness">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Fitness Goals</h3>
+            <p class="text-gray-600 text-sm mb-4">Achieve your fitness goals with expert tips and routines.</p>
+            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Read More</a>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        <img src="Image/spring-flowers-flowers-collage-floral-68507.jpeg" class="w-full h-48 object-cover" alt="Art">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Art & Creativity</h3>
+            <p class="text-gray-600 text-sm mb-4">Unleash your creativity with inspiring art and design ideas.</p>
+            <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Read More</a>
+        </div>
+    </div>
+</div>
+
+<!-- footer content here -->
+<footer class="bg-gray-800 text-white py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      
+      <!-- Left Side -->
+      <div class="mb-4 md:mb-0">
+        <h2 class="text-lg font-semibold">Your Company</h2>
+        <p class="text-sm text-gray-400">© 2025 All rights reserved.</p>
+      </div>
+
+      <!-- Center Links -->
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <a href="#" class="text-gray-400 hover:text-white transition">Home</a>
+        <a href="#" class="text-gray-400 hover:text-white transition">About</a>
+        <a href="#" class="text-gray-400 hover:text-white transition">Services</a>
+        <a href="#" class="text-gray-400 hover:text-white transition">Contact</a>
+      </div>
+
+      <!-- Right Side (Social Links) -->
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11 9.95V15h-2v-3h2v-2c0-2 1.2-3 3-3h2v3h-1c-1 0-1 .5-1 1v1h2.5l-.5 3H16v6.95A10 10 0 0022 12z"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21.5 6.5a8.38 8.38 0 01-2.36.65 4.1 4.1 0 001.8-2.27 8.2 8.2 0 01-2.6 1 4.1 4.1 0 00-7 3.73 11.6 11.6 0 01-8.4-4.3 4.1 4.1 0 001.3 5.47 4 4 0 01-1.9-.52v.05a4.1 4.1 0 003.3 4 4.1 4.1 0 01-1.8.07 4.1 4.1 0 003.8 2.8A8.23 8.23 0 013 18.3a11.5 11.5 0 006.29 1.84c7.55 0 11.68-6.25 11.68-11.67v-.53A8.1 8.1 0 0022 6.5h-.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+</body>
+
+</html>
